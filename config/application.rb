@@ -23,5 +23,6 @@ module GyakutenCloneGroup
     config.load_defaults 6.0
     # 以下の表記で管理画面を日本語化することができる
     config.i18n.default_locale = :ja
+    config.generators.system_tests = nil
   end
 end

@@ -1,5 +1,4 @@
-<div class="fixed-top">
-   <nav class="navbar navbar-expand-lg navbar-dark p-1.5" style="background-color: #6699FF;">
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color: #6699FF;">
         <a class="navbar-brand" href="#">Gyakuten</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,6 +37,9 @@
                     <li class="nav-item">
                     <a class="nav-item nav-link active" href="#">LINE@</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-item nav-link active" href="#">新規登録</a>
+                    </li>
                     <% if user_signed_in? %>
                     <li class="nav-item">
                     <a class="nav-item nav-link active" rel="nofollow" data-method="delete" href="/users/sign_out">ログアウト</a>
@@ -48,5 +50,5 @@
                     </li>
                     <% end %>
               </ul>
+        </div>
     </nav>
-</div>  

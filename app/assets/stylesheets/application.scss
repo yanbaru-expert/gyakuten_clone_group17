@@ -1,5 +1,12 @@
 @import "bootstrap/scss/bootstrap";
 
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
 .navbar-brand {
 font-size: 30px;
 padding-left: 225px;

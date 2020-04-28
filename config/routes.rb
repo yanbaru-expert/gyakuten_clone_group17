@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   # Topページ遷移
+  root to: 'movies#index'
   resources :movies
 end

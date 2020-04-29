@@ -12,9 +12,9 @@
             <th class="w-5">内容</th>
           </tr>
           <tbody>
-          <% @awsTexts.each do |aws| %>
+          <% @awsTexts.each.with_index(1) do |aws, i| %>
             <tr>
-              <td><%= aws.id %></td>
+              <td><%= i %></td>
               <td><a href="#" target="_blank" ></a><%= aws.title%></td>
             </tr>
             <% end %>

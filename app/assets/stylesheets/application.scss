@@ -1,5 +1,15 @@
 @import "bootstrap/scss/bootstrap";
 
+// ログイン画面
+
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
+
+// 「ログインしました」などのフラッシュ用スタイル
+
 .alert-notice {
   @extend .alert-info;
 }
@@ -7,10 +17,11 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
 .navbar-brand {
-font-size: 30px;
-padding-left: 225px;
-padding-right: 60px;
+font-size: 30px;	
+padding-left: 225px;	
+padding-right: 60px;	
 }
 
 .nav-item {

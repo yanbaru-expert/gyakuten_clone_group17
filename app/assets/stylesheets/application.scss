@@ -17,3 +17,43 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+.navbar-brand {
+font-size: 30px;	
+padding-left: 225px;	
+padding-right: 60px;	
+}
+
+.nav-item {
+font-size: 18px;
+padding-left: 8px;
+padding-right: 8px;
+}
+
+.movie-title {
+  font-size:20px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.contents p {
+  width: 710px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.container h2 {
+  padding: 20px 0px 10px 0px ;
+  font-size: 30px;
+}
+
+.table-container {
+  width: 710px;
+  margin: 0 auto;
+}
+
+.aws-table-head {
+  background-color: #5D99FF;
+}

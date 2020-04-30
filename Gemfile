@@ -16,7 +16,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'activeadmin'
 gem 'devise'
 
-<<<<<<< HEAD
 # 日本語化
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'

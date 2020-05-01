@@ -15,7 +15,7 @@
           <% @awsTexts.each.with_index(1) do |aws, i| %>
             <tr>
               <td><%= i %></td>
-              <td><a href="#" target="_blank" ></a><%= aws.title%></td>
+              <td><a href="<%= link_to("/aws/#{aws.id}") %>" target="_blank" ></a><%= aws.title%></td>
             </tr>
             <% end %>
           </tbody>

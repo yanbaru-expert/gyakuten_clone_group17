@@ -19,6 +19,11 @@ gem 'devise'
 #日本語化
 gem 'rails-i18n'
 
+# markdown
+gem 'redcarpet', '~> 2.3.0'
+# シンタックスハイライト
+gem 'coderay'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

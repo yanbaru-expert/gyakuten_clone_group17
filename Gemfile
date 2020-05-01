@@ -11,13 +11,18 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'kaminari'
 
 # 管理者画面
 gem 'activeadmin'
 gem 'devise'
 
-#日本語化
-gem 'rails-i18n'
+# 日本語化
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
+
+# Bootstrap
+gem 'devise-bootstrap-views', '~> 1.0'
 
 # markdown
 gem 'redcarpet', '~> 2.3.0'

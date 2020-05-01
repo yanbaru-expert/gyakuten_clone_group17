@@ -24,6 +24,11 @@ gem 'devise-i18n'
 # Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
 
+# markdown
+gem 'redcarpet', '~> 2.3.0'
+# シンタックスハイライト
+gem 'coderay'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

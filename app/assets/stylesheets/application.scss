@@ -65,3 +65,24 @@ padding-right: 8px;
 .aws-table-head {
   background-color: #5D99FF;
 }
+
+
+@media screen and (min-width: 1200px) {
+  #conteinar {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #conteinar {
+    width: 990px;
+    padding: 120px 0 80px 0;
+    margin: 0 auto;
+  }
+
+  #aws-contents {
+    width: 710px;
+    margin: 0 auto;
+  }
+  
+}

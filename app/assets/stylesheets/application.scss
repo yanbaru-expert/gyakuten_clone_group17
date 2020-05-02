@@ -38,25 +38,14 @@ padding-right: 8px;
   margin-top: 80px;
 }
 
-//aws 
-aws-table-head {
+
+.aws-table-head {
   background-color: #5D99FF;
 }
 
 #aws-contents {
   width: 710px;
   margin: 0 auto;
-}
-
-.contents p {
-  width: 710px;
-  margin: 0 auto;
-  padding-bottom: 15px;
-}
-
-.container h2 {
-  padding: 20px 0px 10px 0px ;
-  font-size: 30px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -72,33 +61,29 @@ aws-table-head {
     margin: 0 auto;
   }
 }
+.text-center {
+  text-align: center !important;
+}
 
-main{
-    font-size:20px;
-    text-align: center !important;
-    float: center;
-    margin: 0 px auto;
-    padding: 120px 0 80px 0;
-    width: 710px;
-    line-height: 1.5px;
-    display: block;
-    box-sizing: border-box;
-  }
+.contents p {
+  width: 710px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
 
-  /* mainに統合
-    .col-xs-12 {
-    margin-bottom: 80px;
-  }
-    .movie-title {
-    font-size:20px;
-  }
-  
-  .text-center {
-    text-align: center !important;
-  }
-    
-  .table-container {
-    width: 710px;
-    margin: 0 auto;
-  }
-  */
+.container h2 {
+  padding: 20px 0px 10px 0px ;
+  font-size: 30px;
+}
+
+.movie-title {
+  font-size:20px;
+}
+
+main {
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 710px;
+  display: block;
+  box-sizing: border-box;
+}

@@ -18,6 +18,8 @@
   @extend .alert-danger;
 }
 
+// ナビゲーションバー
+
 .navbar-brand {
 font-size: 30px;	
 padding-left: 225px;	
@@ -30,26 +32,15 @@ padding-left: 8px;
 padding-right: 8px;
 }
 
-.movie-title {
-  font-size:20px;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.col-xs-12{
-  margin-bottom: 80px;
-}
+//ページネーション
 
 .pagination {
   margin-top: 80px;
 }
 
-.contents p {
-  width: 710px;
-  margin: 0 auto;
-  padding-bottom: 15px;
+
+.aws-table-head {
+  background-color: #5D99FF;
 }
 
 .container h2 {
@@ -57,32 +48,14 @@ padding-right: 8px;
   font-size: 30px;
 }
 
-.table-container {
-  width: 710px;
+.movie-title {
+  font-size:20px;
+}
+
+main {
   margin: 0 auto;
-}
-
-.aws-table-head {
-  background-color: #5D99FF;
-}
-
-
-@media screen and (min-width: 1200px) {
-  #conteinar {
-    width: 1200px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #conteinar {
-    width: 990px;
-    padding: 120px 0 80px 0;
-    margin: 0 auto;
-  }
-
-  #aws-contents {
-    width: 710px;
-    margin: 0 auto;
-  }
-  
+  padding: 1rem 0;
+  max-width: 710px;
+  display: block;
+  box-sizing: border-box;
 }

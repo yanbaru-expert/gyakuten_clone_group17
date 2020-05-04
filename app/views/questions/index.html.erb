@@ -1,0 +1,29 @@
+<div id="container">
+  <section id="questions">
+    <div class="container">
+      <% @questions.each do |question| %>
+        <div class="question-container">
+          <a href="<%= "/question/#{question.id}" %>">
+            <div class="question">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="title-container">
+                    <p class="title">
+                      <%= question.title %>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="info text-right">
+                    <p>質問日</p>
+                    <p>Views</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>

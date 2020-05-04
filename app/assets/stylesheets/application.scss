@@ -59,3 +59,36 @@ main {
   display: block;
   box-sizing: border-box;
 }
+
+#questions .question-container {
+  padding: 30px 0;
+}
+
+#questions a {
+  text-decoration: none;
+  display: block;
+  color: #333333;
+  border: solid 2px #505050;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+#questions a .title-container {
+  word-wrap: normal;
+}
+
+#questions a .title {
+  font-size: 22px;
+  line-height: 2;
+}
+
+#questions .question {
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}

@@ -1,13 +1,24 @@
-<div class="text-center">
-  <div class="col-xs-12">
-    <div class="movie-title">
-      <% @movies.each.with_index(1) do |movie, i| %>
-        <div class="mt-5">
-        <p><%= "Lv.#{(@movies.current_page - 1) * 10 + i}: #{movie.title}" %></p>
+<section id="movie">
+  <div class="container">
+    <div class="rows">
+      <section id="take_of_rails">
+        <div class="cover text-center">
         </div>
-        <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <% end %>
+      </section>
+      <div class="text-center">
+        <div class="col-xs-12">
+          <div class="movie-title">
+            <% @movies.each.with_index(1) do |movie, i| %>
+              <div class="mt-5">
+              <p><%= "Lv.#{(@movies.current_page - 1) * 10 + i}: #{movie.title}" %></p>
+              </div>
+              <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <% end %>
+          </div>
+          <%= paginate @movies %>
+        </div>
+      </div>
+
     </div>
-    <%= paginate @movies %>
   </div>
-</div>
+</section>

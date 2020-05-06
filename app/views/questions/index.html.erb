@@ -1,9 +1,24 @@
-<div id="container">
+  <div class="container">
+    <h1>新規投稿</h1>
+    <%= form_with model: @question do |form| %>
+      <div class="form-group">
+        <label class="control-label" for="question_title">【質問】</label>
+        <textarea name="question[title]" id="question_title" rows="3" class="form-control initial-height"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="question_details">【詳細】</label>
+        <textarea name="question[details]" id="question_details" rows="5" class="form-control initial-height"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" name="commit" class="btn btn-primary btn-block btn-lg" value="送信" data-confirm="新規投稿しますか？" data-disable-with="送信">
+      </div>
+    <% end %>
+  </div>
   <section id="questions">
     <div class="container">
       <% @questions.each do |question| %>
         <div class="question-container">
-          <a href="<%= "/question/#{question.id}" %>">
+          <a href="<%= "/questions/#{question.id}" %>">
             <div class="question">
               <div class="row">
                 <div class="col-md-7">
@@ -26,4 +41,3 @@
       <% end %>
     </div>
   </section>
-</div>

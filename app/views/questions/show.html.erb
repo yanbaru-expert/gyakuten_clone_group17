@@ -8,4 +8,19 @@
       <h3>【詳細】</h3>
       <%= markdown(@question.detail).html_safe %>
     </div>
+    <!-- 回答がない場合は表示しない -->
+    <% @solutions.each.with_index(1) do |sol, i|  %>
+      <hr>
+      <div class="solution">
+        <%# 回答が一つの場合は【回数】、複数ある場合は【回答x】とする %>
+        <% if @solutions.count == 1 %>
+          <h3>【回答】</h3>
+        <% else %>
+          <h3>【回答<%= i %>】</h3>
+        <% end %>
+        <%= markdown(sol.answer).html_safe %>
+      </div> 
+    <% end %>
+      
+
   </section>

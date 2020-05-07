@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
 
   def index
-    @questions = Question.all
+    @questions = Question.all.order(id: "DESC")
   end
 
   def show
@@ -15,6 +15,7 @@ class QuestionsController < ApplicationController
   
   def create
     Question.create(question_params)
+    redirect_to questions_path
   end
   
   private 

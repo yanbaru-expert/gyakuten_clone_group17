@@ -1,16 +1,21 @@
   <div class="container">
     <h1>新規投稿</h1>
-    <%= form_with model: @question do |form| %>
+    <%= form_with model: @question do |f| %>
       <div class="form-group">
-        <label class="control-label" for="question_title">【質問】</label>
-        <textarea name="question[title]" id="question_title" rows="3" class="form-control initial-height"></textarea>
+        <%= f.label :title ,"【質問】" ,class: "control-label" %>
+        <%# <label class="control-label" for="question_title">【質問】</label> %>
+        <%= f.text_area :title, class: "form-control initial-height" %>
+        <%# <textarea name="question[title]" id="question_title" rows="3" class="form-control initial-height"></textarea> %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="question_details">【詳細】</label>
-        <textarea name="question[details]" id="question_details" rows="5" class="form-control initial-height"></textarea>
+        <%= f.label :detail ,"【詳細】" ,class: "control-label" %>
+        <%# <label class="control-label" for="question_details">【詳細】</label> %>
+        <%= f.text_area :detail, class: "form-control initial-height" %>
+        <%# <textarea name="question[details]" id="question_details" rows="5" class="form-control initial-height"></textarea> %>
       </div>
       <div class="form-group">
-        <input type="submit" name="commit" class="btn btn-primary btn-block btn-lg" value="送信" data-confirm="新規投稿しますか？" data-disable-with="送信">
+        <%= f.submit "送信", class: "btn btn-primary btn-block btn-lg" , data: {confirm: "新規投稿しますか？"} %>
+        <%# <input type="submit" name="commit" class="btn btn-primary btn-block btn-lg" value="送信" data-confirm="新規投稿しますか？" data-disable-with="送信"> %>
       </div>
     <% end %>
   </div>

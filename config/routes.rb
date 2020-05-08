@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :aws
   resources :movies
   resources :questions
+  post '/question/:id/solutions', to: 'solutions#create'
 end

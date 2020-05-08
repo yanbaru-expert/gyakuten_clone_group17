@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   # Topページ遷移
   root to: 'movies#index'
+
+  resources :questions
   resources :aws
   resources :movies
+
 end

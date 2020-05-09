@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root to: 'movies#index'
   resources :aws
   resources :movies
-  resources :questions
-  post '/question/:id/solutions', to: 'solutions#create'
+  resources :questions do
+  resources :solutions
+  end
+  # post '/question/:id/solutions', to: 'solutions#create'
 end

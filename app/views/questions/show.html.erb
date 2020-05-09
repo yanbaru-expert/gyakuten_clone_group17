@@ -9,11 +9,11 @@
       <%= markdown(@question.detail).html_safe %>
     </div>
     <!-- 回答がない場合は表示しない -->
-    <% @solutions.each.with_index(1) do |sol, i|  %>
+    <% @question.solutions.each.with_index(1) do |sol, i|  %>
       <hr>
       <div class="solution">
         <%# 回答が一つの場合は【回数】、複数ある場合は【回答x】とする %>
-        <% if @solutions.count == 1 %>
+        <% if @question.solutions.count == 1 %>
           <h3>【回答】</h3>
         <% else %>
           <h3>【回答<%= i %>】</h3>
@@ -23,7 +23,7 @@
     <% end %>
     <div class="container">
       <h1>回答投稿</h1>
-      <%= form_with(url: "/question/#{@question.id}/solutions") do |f| %>
+      <%= form_with(url: "/questions/#{@question.id}/solutions", local: true) do |f| %>
         <div class="form-group">
           <%= f.label :answer, "【回答】" ,class: "control-label" %>
         </div>

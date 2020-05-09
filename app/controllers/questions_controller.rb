@@ -2,18 +2,13 @@ class QuestionsController < ApplicationController
   
   def index
     @questions = Question.all.order(id: "DESC")
+    # 新規投稿画面がないので新規登録するロジックをnewメソッドから移設
+    @question = Question.new
   end
   
   def show
     # 質問
     @question = Question.find_by(id: params[:id])
-    # 回答（複数）
-    @solutions = Solution.where(question_id: params[:id])
-  end
-  
-  def new
-    @question = Question.new
-    
   end
   
   def create

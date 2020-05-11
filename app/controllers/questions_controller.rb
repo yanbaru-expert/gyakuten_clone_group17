@@ -1,36 +1,27 @@
 class QuestionsController < ApplicationController
-
-  # 新規作成画面に対応するアクション
-  def new
-    @question = Question.new
-  end
-
-  # 一覧画面に対応するアクション
+  
   def index
     @questions = Question.all
+  
+    @question = Question.new
   end
   
-  # 新規登録するためのアクション
+  def show
+    # 質問
+    @question = Question.find_by(id: params[:id])
+  end
+  
   def create
     Question.create(question_params)
+    redirect_to questions_path
+  end
+  
+  private 
+
+  def question_params
+    params.require(:question).permit(:title, :detail)
+    
   end
 
-  # 削除を行うためのアクション
-  def destroy
-    question = Question.find(params[:id])
-    question.delete
-  end
-
-private
-
-    def set_question
-      @question = Question.find(params[:id])
-    end
-
-    def question_params
-      params.require(:question).permit(:title, :detail)
-    end
 
 end
-
-   

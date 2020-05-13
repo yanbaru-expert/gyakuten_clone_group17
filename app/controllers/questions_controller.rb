@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
       flash[:notice] = "登録に成功しました"
     else
       flash.now[:alert] = "登録に失敗しました"
-      @questions = Question.all.order(created_at: :"DESC")
+      @questions = Question.all.order(created_at: :desc)
       render :index
     end
   end

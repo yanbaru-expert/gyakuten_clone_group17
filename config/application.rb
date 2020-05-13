@@ -25,5 +25,7 @@ module GyakutenCloneGroup
     # 以下の表記で管理画面を日本語化することができる
     config.i18n.default_locale = :ja
     config.generators.system_tests = nil
+
+    config.time_zone = 'Tokyo'
   end
 end

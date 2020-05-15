@@ -3,6 +3,11 @@ class QuestionsController < ApplicationController
     @question = Question.new
     @questions = Question.all.order(id: "DESC")
   end
+  
+
+  def show
+    @question = Question.find_by(id: params[:id])
+  end
 
   def create
     @question = Question.new(question_params)

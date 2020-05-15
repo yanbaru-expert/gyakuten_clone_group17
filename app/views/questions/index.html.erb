@@ -1,7 +1,7 @@
 <div class="container">
   <div class="questions">
-    <div class="text-center">
-      <h2>新規投稿</h2>
+    <div class="text-left">
+      <h1>新規投稿</h1>
     </div>
 
     <%= form_with url: questions_path, model: @question, local: true do |form| %>
@@ -31,7 +31,9 @@
               </div>
 
               <div class="col-6 question-date">
+              <div class="row">
                  <p>質問日　<%= l question.updated_at, format: :long %></p>
+                 <p>Views</p>
 
               </div>
           </div>

@@ -19,24 +19,31 @@
       </div>
     <% end %>
 
-    <div class="text-center">
+    <section id="questions">
+    <div class="container">
       <% @questions.each do |question| %>
-      
-          <div class="row">
-
-              <div class="col-6">
-                  <p class="question-title">
+        <div class="question-container">    
+         <a href="<%= "/questions/#{question.id}" %>">
+          <div class="queston">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="title-container">
+                  <p class="title">
                     <%= question.title %>
                   </p>
+                </div>
               </div>
-
-              <div class="col-6 question-date">
-                 <p>質問日　<%= l question.updated_at, format: :long %></p>
-
-              </div>
+                <div class="col-md-5">
+                  <div class="info-text-right">
+                  <p>質問日 <%= l question.updated_at, format: :long %></p>
+                  <p>views</p>
+                  </div>
+                </div>
+            </div>
           </div>
+
+          </a>
+        </div>
       <% end %>
     </div>
-
-  </div>
-</div>
+  </section>

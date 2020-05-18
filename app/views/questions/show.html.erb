@@ -1,0 +1,14 @@
+<div id="container">
+  <section id="question">
+    <div class="title">
+    <h3>【質問】</h3>
+      <%= markdown(@question.title).html_safe %>
+      <hr>
+    </div>
+    <div class="detail">
+      <h3>【詳細】</h3>
+      <%= markdown(@question.detail).html_safe %>
+      <hr>
+    </div>
+  </section>
+</div>

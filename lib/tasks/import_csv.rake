@@ -21,6 +21,22 @@ namespace :import_csv do
       puts "インポート失敗：UnknownAttributeError"
     end
   end
+
+  desc "CSVファイルをline_textsにテーブルにインポートする"
+  task line_texts: :environment do
+    path = File.join Rails.root, "db/csv_data/line_data.csv"
+      # import.rb呼び出し
+      list = Import.csv_data(path: path)
+
+      puts "LineTextsデータのインポート処理を開始"
+    begin
+      LineText.create!(list)
+      puts "LineTextsデータのインポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "LineTextsデータのインポートに失敗::UnknownAttributeError"
+    end
+  end
+
 end
 
 

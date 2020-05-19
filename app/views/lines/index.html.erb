@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="contents">
+    <div class="text-center">
+      <h2>LINE@</h2>
+    </div>
+    <div class="table-container">
+      <table class="table table-striped">
+        <thead class="bg-success text-white">
+          <tr>
+            <th class="w-1">No.</th>
+            <th class="w-2">ジャンル</th>
+            <th class="w-5">内容</th>
+          </tr>
+          <tbody>
+          <% @lineTexts.each.with_index(1) do |line, i| %>
+            <tr>
+              <td><%= i %></td>
+              <td><%= line.genre %></td>
+              <td><%= link_to("#{line.title}", "/lines/#{line.id}", target: :_blank) %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>

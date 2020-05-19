@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :solutions
   resources :aws
   resources :movies
+  resources :lines
 
 end

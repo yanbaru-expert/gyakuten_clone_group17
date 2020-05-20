@@ -99,3 +99,23 @@ border: 2px solid #5C99FF;
 #line-contents p {
   line-height: 3em;
 }
+
+ //フッター
+ .footer {
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.footer a {
+  padding: 0 20px;
+  font-size: 20px;	
+}
+
+body { 
+  padding-top: 70px; 
+  padding-bottom: 70px; 
+}

@@ -21,16 +21,18 @@
 // ナビゲーションバー
 
 .navbar-brand {
-font-size: 30px;	
-padding-left: 225px;	
-padding-right: 60px;	
-}
+  font-size: 30px;	
+  padding-left: 100px;
+  padding-right: 60px;	
+  }
 
 .nav-item {
 font-size: 18px;
 padding-left: 8px;
 padding-right: 8px;
 }
+
+
 
 //ページネーション
 
@@ -116,6 +118,6 @@ border: 2px solid #5C99FF;
 }
 
 body { 
-  padding-top: 80px; 
+  padding-top: 70px; 
   padding-bottom: 70px; 
 }

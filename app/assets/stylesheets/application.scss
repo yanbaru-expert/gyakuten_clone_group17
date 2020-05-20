@@ -21,16 +21,18 @@
 // ナビゲーションバー
 
 .navbar-brand {
-font-size: 30px;	
-padding-left: 225px;	
-padding-right: 60px;	
-}
+  font-size: 30px;	
+  padding-left: 100px;
+  padding-right: 60px;	
+  }
 
 .nav-item {
 font-size: 18px;
 padding-left: 8px;
 padding-right: 8px;
 }
+
+
 
 //ページネーション
 
@@ -98,4 +100,24 @@ border: 2px solid #5C99FF;
 
 #line-contents p {
   line-height: 3em;
+}
+
+ //フッター
+ .footer {
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.footer a {
+  padding: 0 20px;
+  font-size: 20px;	
+}
+
+body { 
+  padding-top: 70px; 
+  padding-bottom: 70px; 
 }

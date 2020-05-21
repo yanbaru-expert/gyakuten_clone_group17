@@ -1,6 +1,6 @@
 <div class="container">
   <div class="questions">
-    <div class="text-center">
+    <div class="text-left">
       <h2>新規投稿</h2>
     </div>
 
@@ -24,11 +24,11 @@
       <% @questions.each do |question| %>
         <div class="question-container">    
          <a href="<%= "/questions/#{question.id}" %>">
-          <div class="queston">
-            <div class="row">
+          <div class="question">
+            <div class="rowtitle">
               <div class="col-md-7">
                 <div class="title-container">
-                  <p class="title">
+                  <p class="questiontitle">
                     <%= question.title %>
                   </p>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-5">
                   <div class="info-text-right">
                   <p>質問日 <%= l question.updated_at, format: :long %></p>
-                  <p>views</p>
+                  <%= pluralize(question.reviews_count, "views", locale: :en) %>
                   </div>
                 </div>
             </div>

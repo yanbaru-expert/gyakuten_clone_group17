@@ -1,7 +1,7 @@
 <% if @question.errors.any? %>
     <div id="error_planation" >
         <div class ="alert alert-danger">
-            エラーがあります。
+            <%= @question.errors.count %>つのエラーがあります。
         </div>
         <ul>
             <% @question.errors.full_messages.each do |message| %>

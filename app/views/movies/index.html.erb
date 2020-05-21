@@ -3,7 +3,14 @@
     <div class="movie-title">
       <% @movies.each.with_index(1) do |movie, i| %>
         <div class="mt-5">
-        <p><%= "Lv.#{(@movies.current_page - 1) * 10 + i}: #{movie.title}" %></p>
+          <% case movie.genre %>
+          <% when "Basic","Git","Ruby","Ruby on Rails","Marketing" %>
+          <p><%= "Lv.#{(@movies.current_page - 1) * 10 + i}: #{movie.title}" %></p>
+
+          <% else %>
+          <p><%= movie.title %></p>
+
+          <% end %>
         </div>
         <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <% end %>

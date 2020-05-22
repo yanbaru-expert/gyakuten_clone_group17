@@ -80,6 +80,9 @@ ActiveRecord::Schema.define(version: 2020_05_22_025610) do
   end
 
   create_table "texts", force: :cascade do |t|
+    t.string "genre"
+    t.string "title"
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

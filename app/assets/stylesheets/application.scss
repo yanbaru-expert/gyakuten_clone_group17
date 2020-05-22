@@ -144,9 +144,7 @@ body {
 }
 
 //テキスト教材ページ
-.texts-wrapper{
-  text-align: center;
-}
+
 
 .contents-title{
   padding: 40px 0px 10px 0px;
@@ -154,6 +152,10 @@ body {
 }
 
 @media screen and (min-width: 0px){
+  .texts-wrapper{
+    text-align: center;
+  }
+
   .text-contents{
     box-sizing: border-box;
     display: block; 

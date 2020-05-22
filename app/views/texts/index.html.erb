@@ -3,14 +3,23 @@
         <h2>テキスト教材</h2>
     </div>
 
-        <div class="texts-contents" media="screen and (min-width: 0px)">
-            <div class="texts-content">
-                <%= @texts.each do |text| %>
-                        <img src= <%=  %>>
-                            <h3>text.title</h3>
-                        <p><%= 【text.genre】 %></p>
-                    </a>      
-                <% end %>
+    <div class="row">
+    <div class="col-lg-4 d-flex">
+        <div class="card" style="width: 20rem;">
+            <%= @texts.each do |text| %>
+                <a href="/texts/<%= text.id %>">
+                    <img class="card-img-top" src="" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= text.title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= text.genre %>
+                        </p>
+                    </div>
+                </a> 
+            <% end %>
         </div>
-
+    </div>
+    </div>
 </div>

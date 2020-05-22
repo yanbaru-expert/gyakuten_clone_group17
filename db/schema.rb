@@ -66,11 +66,11 @@ ActiveRecord::Schema.define(version: 2020_05_20_113842) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string   "title"
-    t.text     "detail"
+    t.string "title"
+    t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer  "reviews_count", default: 0
+    t.integer "reviews_count", default: 0
   end
 
   create_table "solutions", force: :cascade do |t|

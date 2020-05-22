@@ -21,9 +21,9 @@
 // ナビゲーションバー
 
 .navbar-brand {
-  font-size: 30px;	
+  font-size: 30px;
   padding-left: 100px;
-  padding-right: 60px;	
+  padding-right: 60px;
   }
 
 .nav-item {
@@ -40,9 +40,18 @@ padding-right: 8px;
   margin-top: 80px;
 }
 
+//AWS
 
 .aws-table-head {
   background-color: #5D99FF;
+}
+
+.aws-table-head th{
+  width: 30px;
+}
+
+.aws-title {
+  padding-top: 80px
 }
 
 .container h2 {
@@ -108,10 +117,10 @@ border: 2px solid #5C99FF;
 
 //質問詳細
 .title h3{
- font-size: 20px; 
+ font-size: 20px;
 }
 .detail h3{
-  font-size: 20px; 
+  font-size: 20px;
  }
 
  //LINE@
@@ -135,10 +144,10 @@ border: 2px solid #5C99FF;
 }
 .footer a {
   padding: 0 20px;
-  font-size: 20px;	
+  font-size: 20px;
 }
 
-body { 
-  padding-top: 70px; 
-  padding-bottom: 70px; 
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }

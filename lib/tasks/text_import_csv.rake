@@ -1,5 +1,4 @@
 require 'import.rb'
-require 'csv'
 namespace :text_import_csv do
     desc "CSVデータをtextsテーブルにインポートする"
     task texts: :environment do

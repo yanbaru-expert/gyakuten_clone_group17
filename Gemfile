@@ -24,6 +24,8 @@ gem 'devise-i18n'
 # Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
 
+gem 'ransack'
+
 # markdown
 gem 'redcarpet', '~> 2.3.0'
 # シンタックスハイライト

@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find_by(id: params[:id])
     @solutions = @question.solutions
+    @question.increment!(:reviews_count, 1)
   end
 
   def create
@@ -15,7 +16,6 @@ class QuestionsController < ApplicationController
       redirect_to action: :index
       flash[:notice] = "登録に成功しました"
     else
-      flash.now[:alert] = "登録に失敗しました"
       @questions = Question.all.order(created_at: :desc)
       render :index
     end

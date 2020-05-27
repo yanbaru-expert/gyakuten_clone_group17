@@ -3,11 +3,11 @@ document.addEventListener('turbolinks:load',function() {
         var val = $(this).val();
         $('.card-title').each(function() {
             if($(this).text().toLowerCase().indexOf(val.toLowerCase()) != -1){
-                $(this).parents('#text').removeClass("hidden")
+                $(this).parents('#text').removeClass("d-none")
                 $(this).parents('#text').addClass("d-flex")
             }else{
                 $(this).parents('#text').removeClass("d-flex")
-                $(this).parents('#text').addClass("hidden")
+                $(this).parents('#text').addClass("d-none")
             }
         });
 

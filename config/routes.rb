@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :movies
   resources :lines
   
+  resources :texts
   resources :texts do
     collection do
       get 'search'

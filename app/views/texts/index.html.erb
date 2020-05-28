@@ -8,7 +8,7 @@
     <% @texts.each do |text| %>
         <div class="d-flex col-lg-4 p-4">
             <a href="/texts/<%= text.id %>" class="card">
-                <img class="card-img-top" src="/assets/text.jpeg">
+                  <%= image_tag 'text.jpeg', class: 'card-img-top'%>
                 <div class="card-body">
                     <h5 class="card-title">
                         <%= text.title %>

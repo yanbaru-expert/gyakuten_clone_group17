@@ -1,14 +1,19 @@
 class SolutionsController < ApplicationController
  def create
-    @question = Question.find(params[:question_detail])
-    @solution = Solution.find(params[:solution_detail])
-  binding.pry
+    @question = Question.find(params[:question_id])
+    @solution = @question.solutions.build(solution_params)
+  
     if @solution.save
-      redirect_to questions_path, notice: "質問を投稿しました"
+       redirect_to question "質問を投稿しました"
     else
       flash.now[:alert] = "エラーが発生しました"
-      @questions = Question.all
-      render :index
+       @solutions = @question.solutions
+       render "questions/show"
     end
   end
+
+  private
+    def solution_params
+      params.require(:solution).permit(:detail)
+    end
 end

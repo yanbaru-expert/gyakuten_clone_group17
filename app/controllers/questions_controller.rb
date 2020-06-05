@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find_by(id: params[:id])
     @solutions = @question.solutions
+    @solution = Solution.new
     @question.increment!(:reviews_count, 1)
   end
 

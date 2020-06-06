@@ -49,4 +49,8 @@ module ApplicationHelper
     controller_name == "lines" ? "bg-success" : "bg-primary"
   end
 
+  def wrap_style
+    controller_name == "texts" ?  "rails_text_wrap" : "default_wrap"
+  end
+
 end

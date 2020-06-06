@@ -32,7 +32,13 @@ padding-left: 8px;
 padding-right: 8px;
 }
 
-
+main {
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 910px;
+  display: block;
+  box-sizing: border-box;
+}
 
 //ページネーション
 
@@ -181,20 +187,8 @@ form.search-form input::placeholder {
   font-size:18px
 }
 
-main.default_wrap {
-  margin: 0 auto;
-  padding: 1rem 0;
-  max-width: 910px;
-  display: block;
-  box-sizing: border-box;
-}
-
 main.rails_text_wrap {
-  margin: 0 auto;
-  padding: 1rem 0;
   max-width: 100%;
-  display: block;
-  box-sizing: border-box;
 }
 
 .aws-content {

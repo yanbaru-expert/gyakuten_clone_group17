@@ -50,7 +50,7 @@ module ApplicationHelper
   end
 
   def wrap_style
-    controller_name == "texts" ?  "rails_text_wrap" : "default_wrap"
+    controller_name == "texts" ? "rails_text_wrap" : "default_wrap"
   end
 
 end

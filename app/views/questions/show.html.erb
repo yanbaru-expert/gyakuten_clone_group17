@@ -11,10 +11,11 @@
       <hr>
     </div>
     <div class="solution">
-      <% solutions.each.with_index(1) do |solution, i| %>
-       <h3>【回答】</h3>
-      <%= markdown(@solution.detail).html_safe %>
-      <hr>
+      <% @solutions.each.with_index(1) do |solution, i| %>
+       <h3>【回答<%= i %>】</h3>
+      <%= markdown(solution.detail).html_safe %>
+      <% end %>
+      
     </div>
     <div class= "detail">
      <div class="text-left">

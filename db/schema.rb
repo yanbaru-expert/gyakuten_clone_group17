@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_05_24_032708) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "url"
+    t.string "detail"
     t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -76,6 +77,8 @@ ActiveRecord::Schema.define(version: 2020_05_24_032708) do
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "question_id"
+    t.index ["question_id"], name: "index_solutions_on_question_id"
   end
 
   create_table "texts", force: :cascade do |t|
@@ -98,4 +101,5 @@ ActiveRecord::Schema.define(version: 2020_05_24_032708) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "solutions", "questions"
 end

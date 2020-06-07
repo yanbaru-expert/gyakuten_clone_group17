@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # Topページ遷移
   root to: 'movies#index'
 
-  resources :questions
+  resources :questions do
   resources :solutions
+  end
   resources :aws
   resources :movies
   resources :lines

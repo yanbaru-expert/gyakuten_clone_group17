@@ -14,9 +14,11 @@
     </div>
 </div>
 
+
 <div class="row">
     <% @texts.each do |text| %>
-        <div class="d-flex col-lg-4 p-4" id="text">
+        <div class="d-flex col-md-4 p-4" id="text">
+          <div class = "container">
             <a href="/texts/<%= text.id %>" class="card">
                   <%= image_tag '/text.jpeg', class: 'card-img-top'%>
                 <div class="card-body">
@@ -28,6 +30,7 @@
                     </p>
                 </div>
             </a>
+          </div>
         </div>
-  <% end %>
+    <% end %>
 </div>

@@ -32,7 +32,13 @@ padding-left: 8px;
 padding-right: 8px;
 }
 
-
+main {
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 710px;
+  display: block;
+  box-sizing: border-box;
+}
 
 //ページネーション
 
@@ -61,14 +67,6 @@ padding-right: 8px;
 
 .movie-title {
   font-size:20px;
-}
-
-main {
-  margin: 0 auto;
-  padding: 1rem 0;
-  max-width: 710px;
-  display: block;
-  box-sizing: border-box;
 }
 
 //質問集
@@ -183,6 +181,14 @@ form.search-form input.search-text {
   font-size: 1.5rem !important;
   height: auto !important;
   padding-left: 50px;
+}
+
+form.search-form input::placeholder {
+  font-size:18px
+}
+
+main.rails_text_wrap {
+  max-width: 1400px;
 }
 
 .aws-content {
